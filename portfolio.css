@@ -3,9 +3,10 @@
 :root {
     --primary: #6366f1;
     --primary-hover: #4f46e5;
-    --background: #极f8fafc;
-    --text: #0f172a;
+    --background: #f8fafc;
+    --text: #000000;
     --muted: #64748b;
+
     --shadow: 0 4px 6px rgba(15, 23, 42, 0.1);
     --border: 1px solid rgba(15, 23, 42, 0.1);
     --gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
@@ -146,20 +147,19 @@ body.dark-mode .nav-bar a {
     transform: translateZ(50px) rotateX(5deg);
 }
 
-.hero {
+main {
     display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 1rem;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
     align-items: start;
-    padding: 2rem;
-    min-height: 100vh;
-    background: var(--gradient);
-    color: white;
-    position: relative;
-    overflow: hidden;
+    padding: 6rem 2rem 2rem;
     max-width: 1000px;
     margin: 0 auto;
 }
+
+
+
+
 
 
 
@@ -200,14 +200,18 @@ body.dark-mode .nav-bar a {
 }
 
 .profile-picture {
-    width: 150px;
-    height: 180px;
+    width: 220px;
+    height: 275px;
     border-radius: 20px 20px 20px 0;
     object-fit: cover;
-    border: 3px solid rgba(255,255,255,0.2);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
 }
+
+
+
+
 
 
 
@@ -217,57 +221,101 @@ body.dark-mode .nav-bar a {
 }
 
 .profile-name {
-    margin-top: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    color: white;
+    color: #000000;
+    margin-top: 1rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     text-align: left;
+    white-space: nowrap;
+    max-width: 250px;
 }
+
+
+
+
+
+
+
+
+
+
 
 .hero-content {
     text-align: left;
 }
 
-.hero h1 {
+.content-box {
+    background: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+
+.content-box h1 {
     font-size: clamp(1.5rem, 5vw, 2.5rem);
     font-weight: 700;
     line-height: 1.1;
-    margin: 0 0 0.75rem;
+    margin: 0 0 1rem;
+    color: #000000;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 
 
-.hero p {
-    font-size: 0.9rem;
-    color: rgba(255,255,255,0.8);
-    margin-bottom: 1rem;
-    max-width: 400px;
-    line-height: 1.5;
+
+
+
+
+.content-box p {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    opacity: 0.9;
 }
 
 
 
-.hero-stats {
+
+
+
+
+.stats {
     display: flex;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 1.5rem;
+    margin: 2rem 0;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.hero-stat {
-    font-size: 1.25rem;
+
+
+.stat {
+    font-size: 1.1rem;
     font-weight: 500;
-    color: var(--text);
+    color: #000000 !important;
     padding: 1rem 1.5rem;
+
     border-radius: 12px;
-    background: var(--glass);
-    border: var(--glass-border);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
-    transform: translateZ(0);
-    perspective: 1000px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
+
+
+.stat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
 
 .hero-stat:hover {
     transform: translateZ(30px) rotateY(5deg);
